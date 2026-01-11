@@ -1,6 +1,5 @@
-package com.pluxurydolo.exception;
+package com.pluxurydolo.exception.handler;
 
-import com.pluxurydolo.exception.handler.DefaultExceptionHandler;
 import com.pluxurydolo.exception.utils.FileCreator;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
