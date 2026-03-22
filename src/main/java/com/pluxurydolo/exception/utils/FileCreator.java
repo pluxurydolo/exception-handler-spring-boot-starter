@@ -22,8 +22,8 @@ public class FileCreator {
         Path directoryPath = fullPath.getParent();
 
         return createDirectoryIfEmpty(directoryPath)
-            .map(it -> addLines(fullPath, fileLines))
-            .doOnSuccess(it -> LOGGER.info("vrcs Успешно создан постоянный файл {}", fullPath))
+            .map(_ -> addLines(fullPath, fileLines))
+            .doOnSuccess(_ -> LOGGER.info("vrcs Успешно создан постоянный файл {}", fullPath))
             .doOnError(throwable -> LOGGER.error("gisy Произошла ошибка при создании постоянного файла", throwable));
     }
 
