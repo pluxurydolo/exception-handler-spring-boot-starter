@@ -1,7 +1,7 @@
 package com.pluxurydolo.exception.config;
 
 import com.pluxurydolo.exception.handler.DefaultExceptionHandler;
-import com.pluxurydolo.exception.utils.FileCreator;
+import com.pluxurydolo.exception.util.FileCreator;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
 

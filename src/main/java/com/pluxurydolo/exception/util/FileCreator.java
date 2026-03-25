@@ -1,4 +1,4 @@
-package com.pluxurydolo.exception.utils;
+package com.pluxurydolo.exception.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
