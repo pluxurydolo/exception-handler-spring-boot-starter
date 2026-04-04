@@ -28,7 +28,7 @@ public class DefaultExceptionHandler {
 
     public Mono<String> handle(Throwable throwable) {
         String simpleErrorName = throwable.getClass().getSimpleName();
-        LOGGER.error("ekik Возникло исключение {}", simpleErrorName);
+        LOGGER.error("ekik [exception-handler-starter] Возникло исключение {}", simpleErrorName);
 
         String folder = "logs";
         String fileName = buildFileName(simpleErrorName);

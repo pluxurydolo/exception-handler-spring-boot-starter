@@ -23,8 +23,8 @@ public class FileCreator {
 
         return createDirectoryIfEmpty(directoryPath)
             .map(_ -> addLines(fullPath, fileLines))
-            .doOnSuccess(_ -> LOGGER.info("vrcs Успешно создан постоянный файл {}", fullPath))
-            .doOnError(throwable -> LOGGER.error("gisy Произошла ошибка при создании постоянного файла", throwable));
+            .doOnSuccess(_ -> LOGGER.info("vrcs [exception-handler-starter] Успешно создан постоянный файл {}", fullPath))
+            .doOnError(throwable -> LOGGER.error("gisy [exception-handler-starter] Произошла ошибка при создании постоянного файла", throwable));
     }
 
     private static Mono<Path> createDirectoryIfEmpty(Path directoryPath) {
