@@ -1,9 +1,8 @@
 package com.pluxurydolo.exception.handler;
 
-import com.pluxurydolo.exception.TestApplication;
+import com.pluxurydolo.exception.base.AbstractIntegrationTests;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import reactor.core.publisher.Mono;
 
 import java.nio.file.Path;
@@ -12,8 +11,7 @@ import java.nio.file.Paths;
 import static org.assertj.core.api.Assertions.assertThat;
 import static reactor.test.StepVerifier.create;
 
-@SpringBootTest(classes = TestApplication.class)
-class DefaultExceptionHandlerIntegrationTests {
+class DefaultExceptionHandlerIntegrationTests extends AbstractIntegrationTests {
 
     @Autowired
     private DefaultExceptionHandler defaultExceptionHandler;
@@ -41,7 +39,7 @@ class DefaultExceptionHandlerIntegrationTests {
         Mono<String> result = defaultExceptionHandler.handle(new RuntimeException());
 
         create(result)
-            .expectNextMatches(fileName -> {
+            .expectNextMatches(_ -> {
                 Path folderPath = Paths.get("./logs");
 
                 assertThat(folderPath)

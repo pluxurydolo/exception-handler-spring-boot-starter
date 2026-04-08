@@ -1,9 +1,8 @@
 package com.pluxurydolo.exception.util;
 
-import com.pluxurydolo.exception.TestApplication;
+import com.pluxurydolo.exception.base.AbstractIntegrationTests;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import reactor.core.publisher.Mono;
 
 import java.nio.file.Path;
@@ -12,8 +11,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static reactor.test.StepVerifier.create;
 
-@SpringBootTest(classes = TestApplication.class)
-class FileCreatorIntegrationTests {
+class FileCreatorIntegrationTests extends AbstractIntegrationTests {
 
     @Autowired
     private FileCreator fileCreator;
