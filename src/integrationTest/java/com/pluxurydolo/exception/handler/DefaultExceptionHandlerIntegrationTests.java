@@ -1,6 +1,6 @@
 package com.pluxurydolo.exception.handler;
 
-import com.pluxurydolo.exception.application.TestApplication;
+import com.pluxurydolo.exception.TestApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

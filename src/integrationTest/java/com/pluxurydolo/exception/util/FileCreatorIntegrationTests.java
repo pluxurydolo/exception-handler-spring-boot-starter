@@ -1,6 +1,6 @@
 package com.pluxurydolo.exception.util;
 
-import com.pluxurydolo.exception.application.TestApplication;
+import com.pluxurydolo.exception.TestApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static reactor.test.StepVerifier.create;
 
 @SpringBootTest(classes = TestApplication.class)
-class FileCreatorTests {
+class FileCreatorIntegrationTests {
 
     @Autowired
     private FileCreator fileCreator;

@@ -1,4 +1,4 @@
-package com.pluxurydolo.exception.application;
+package com.pluxurydolo.exception;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
