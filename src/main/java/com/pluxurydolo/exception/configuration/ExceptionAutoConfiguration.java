@@ -1,4 +1,4 @@
-package com.pluxurydolo.exception.config;
+package com.pluxurydolo.exception.configuration;
 
 import com.pluxurydolo.exception.handler.DefaultExceptionHandler;
 import com.pluxurydolo.exception.util.FileCreator;
