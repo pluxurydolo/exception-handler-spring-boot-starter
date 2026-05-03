@@ -22,12 +22,14 @@ class DirectoryCreatorIntegrationTests extends AbstractIntegrationTests {
 
         create(result)
             .expectNextMatches(path -> {
-                long fileLength = path.toFile().length();
+                boolean canWrite = path.toFile().canWrite();
 
                 assertThat(path)
-                    .exists();
-                assertThat(fileLength)
-                    .isZero();
+                    .exists()
+                    .isDirectory();
+
+                assertThat(canWrite)
+                    .isTrue();
 
                 return true;
             })
