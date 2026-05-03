@@ -1,6 +1,6 @@
 package com.pluxurydolo.exception.handler;
 
-import com.pluxurydolo.exception.util.FileCreator;
+import com.pluxurydolo.exception.io.FileCreator;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
