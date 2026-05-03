@@ -32,8 +32,7 @@ class DefaultExceptionHandlerTests {
         Mono<String> result = defaultExceptionHandler.handleAndRethrow(new RuntimeException());
 
         create(result)
-            .expectError(RuntimeException.class)
-            .verify();
+            .verifyErrorMatches(RuntimeException.class::isInstance);
     }
 
     @Test
