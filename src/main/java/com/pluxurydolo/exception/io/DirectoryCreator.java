@@ -15,9 +15,9 @@ public class DirectoryCreator {
 
     public Mono<Path> create(Path directoryPath) {
         return Mono.fromCallable(() -> createDirectoryIfEmpty(directoryPath))
-            .doOnSuccess(_ -> LOGGER.info("deam [exception-starter] Успешно создана директория {}", directoryPath))
+            .doOnSuccess(_ -> LOGGER.info("deam [exception-handler-starter] Успешно создана директория {}", directoryPath))
             .onErrorResume(throwable -> {
-                LOGGER.error("ktfi [exception-starter] Ошибка при создании директории {}", directoryPath);
+                LOGGER.error("ktfi [exception-handler-starter] Ошибка при создании директории {}", directoryPath);
                 return Mono.error(new CreateDirectoryException(throwable));
             })
             .subscribeOn(Schedulers.boundedElastic());
