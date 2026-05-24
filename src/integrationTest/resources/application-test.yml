@@ -4,5 +4,5 @@ spring:
 exception:
   scheduler:
     delete-files:
-      cron: 0 0 0 * * SUN
+      cron: 0/5 * * * * *
       zone: Europe/Moscow
