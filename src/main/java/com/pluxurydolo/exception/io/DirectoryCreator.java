@@ -27,6 +27,7 @@ public class DirectoryCreator {
         if (Files.notExists(directoryPath)) {
             return Files.createDirectories(directoryPath);
         }
+
         return directoryPath;
     }
 }

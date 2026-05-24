@@ -1,0 +1,42 @@
+{
+  "properties": [
+    {
+      "name": "exception.scheduler.delete-files.cron",
+      "type": "java.lang.String",
+      "description": "Cron удаления файлов с ошибками."
+    },
+    {
+      "name": "exception.scheduler.delete-files.zone",
+      "type": "java.lang.String",
+      "description": "Временная зона выполнения cron по удалению файлов с ошибками."
+    }
+  ],
+  "hints": [
+    {
+      "name": "exception.scheduler.delete-files.cron",
+      "values": [
+        {
+          "value": "0 0 0 * * SUN"
+        }
+      ],
+      "providers": [
+        {
+          "name": "any"
+        }
+      ]
+    },
+    {
+      "name": "exception.scheduler.delete-files.zone",
+      "values": [
+        {
+          "value": "Europe/Moscow"
+        }
+      ],
+      "providers": [
+        {
+          "name": "any"
+        }
+      ]
+    }
+  ]
+}

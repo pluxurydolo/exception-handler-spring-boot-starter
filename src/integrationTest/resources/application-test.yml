@@ -1,0 +1,8 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+exception:
+  scheduler:
+    delete-files:
+      cron: 0 0 0 * * SUN
+      zone: Europe/Moscow

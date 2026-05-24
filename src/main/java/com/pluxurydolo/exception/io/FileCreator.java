@@ -1,5 +1,6 @@
 package com.pluxurydolo.exception.io;
 
+import com.pluxurydolo.exception.exception.AddLinesException;
 import com.pluxurydolo.exception.exception.CreateFileException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +39,7 @@ public class FileCreator {
         try {
             return write(path, lines);
         } catch (IOException exception) {
-            throw new IllegalStateException(exception);
+            throw new AddLinesException(exception);
         }
     }
 }

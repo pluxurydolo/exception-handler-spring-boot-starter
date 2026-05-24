@@ -39,7 +39,7 @@ public class DefaultExceptionHandler {
     }
 
     private static String buildFileName(String simpleErrorName) {
-        String pattern = "MM-dd-yyyy_HH-mm-ss_z";
+        String pattern = "yyyy-MM-dd/MM-dd-yyyy_HH-mm-ss_z";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
 
         String now = now().format(formatter);

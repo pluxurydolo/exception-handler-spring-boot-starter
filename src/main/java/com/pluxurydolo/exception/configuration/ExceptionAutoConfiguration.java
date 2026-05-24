@@ -6,7 +6,8 @@ import org.springframework.context.annotation.Import;
 @AutoConfiguration
 @Import({
     ExceptionHandlerConfiguration.class,
-    ExceptionIOConfiguration.class
+    ExceptionIOConfiguration.class,
+    ExceptionSchedulingConfiguration.class
 })
 public class ExceptionAutoConfiguration {
 }
